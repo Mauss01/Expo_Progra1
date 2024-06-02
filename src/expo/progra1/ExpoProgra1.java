@@ -38,9 +38,58 @@ public class ExpoProgra1 {
                     break;
 
                 case 2:
-                    Libro libro1 = new Libro();
-                    break;
+                libros[0] = new Libro("1. Dune");
+                libros[1] = new Libro("2. Metro 2033");
+                libros[2] = new Libro("3. Prision Verde");
+                libros[3] = new Libro("4. Codigo Civil de Honduras");
+                libros[4] = new Libro("5. The Shadow Over Innsmouth");
 
+                int resp2;
+
+        do {
+            System.out.println("Libros disponibles:");
+            for (int i = 0; i < libros.length; i++) {
+                System.out.println(libros[i]);
+            }
+
+            System.out.println("Opciones");
+            System.out.println("1. Rentar libro");
+            System.out.println("2. Devolver libro");
+            System.out.println("3. Regresar al menu principal");
+            System.out.print("Elige una opción: ");
+            resp2 = scanner.nextInt();
+
+            switch (resp2) {
+                case 1:
+                    System.out.print("Elige el número del libro que vas a rentar: ");
+                    int rent = scanner.nextInt() - 1;
+                    if (rent >= 0 && rent < libros.length) {
+                        if (libros[rent].getEstado().equals("disponible")) {
+                            libros[rent].rentar();
+                        } else {
+                            System.out.println("Ya lo prestaron.");
+                        }
+                    } else {
+                        System.out.println("Numero invalido.");
+                    }
+                    break;
+                case 2:
+                    System.out.print("Elige el numero del libro que vas a devolver: ");
+                    int dev = scanner.nextInt() - 1;
+                    if (dev >= 0 && dev< libros.length) {
+                        libros[dev].devolver();
+                    } else {
+                        System.out.println("Numero invalido.");
+                    }
+                    break;
+                case 3:
+                    System.out.println("Saliendo");
+                    break;
+                default:
+                    System.out.println("Opcion invalida.");
+            }
+        } while (resp2 != 3);
+        break;
                 case 3:
                     System.out.println("Los componentes actuales son: ");
                     System.out.println("Procesador: " + computadora1.getProcesador());
