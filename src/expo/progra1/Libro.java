@@ -34,10 +34,14 @@ private String titulo;
         }
     }
 
-    public void devolver() {
+   public void devolver() {
+     if (state.equals("prestado")) {   
+        System.out.println("Devolviste: " + titulo); 
         state = "disponible";
-        System.out.println("Devolviste: " + titulo);
+        }else{
+        System.out.println("El libro ya esta en la libreria: ");
     }
+     }
 
     @Override
     public String toString() {
