@@ -353,7 +353,7 @@ public class ExpoProgra1 {
         System.out.println("¿Que cantante desea?");
         System.out.println("1) Kanye West");
         System.out.println("2) Travis Scott");
-        System.out.print("Seleccione una opcion: ");
+        System.out.println("Seleccione una opcion: ");
         System.out.println("-------------------------------------");
 
         // Validar que la entrada sea un número
@@ -362,7 +362,7 @@ public class ExpoProgra1 {
             System.out.println("-------------------------------------");
             System.out.println("Lo siento no contamos con ese artista.");
             scanner.next(); // Descartar la entrada inválida
-            System.out.print("Seleccione una opcion: ");
+            System.out.println("Seleccione una opcion: ");
             System.out.println("-------------------------------------");
         }
         int opcionCantante = scanner.nextInt();
@@ -415,7 +415,7 @@ public class ExpoProgra1 {
             System.out.println("-------------------------------------");
             System.out.println("Lo siento no contamos con esa cancion.");
             scanner.next(); // Descartar la entrada inválida
-            System.out.print("Seleccione una cancion: ");
+            System.out.println("Seleccione una cancion: ");
             System.out.println("-------------------------------------");
         }
         int opcionCancion = scanner.nextInt();
