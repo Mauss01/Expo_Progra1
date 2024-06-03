@@ -57,12 +57,12 @@ public class ExpoProgra1 {
             System.out.println("1. Rentar libro");
             System.out.println("2. Devolver libro");
             System.out.println("3. Regresar al menu principal");
-            System.out.print("Elige una opción: ");
+            System.out.print("Elige una opcion: ");
             resp2 = lea.nextInt();
 
             switch (resp2) {
                 case 1:
-                    System.out.print("Elige el número del libro que vas a rentar: ");
+                    System.out.print("Elige el numero del libro que vas a rentar: ");
                     int rent = lea.nextInt() - 1;
                     if (rent >= 0 && rent < libros.length) {
                         if (libros[rent].getEstado().equals("disponible")) {
