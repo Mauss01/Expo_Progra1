@@ -20,6 +20,7 @@ public class ExpoProgra1 {
         Eleccion spotify = new Eleccion("Ninguno", "Ninguna",0);
         Computadora computadora1 = new Computadora("Ryzen 7 3700x", 16, "GeForce GTX 1660 Ti GAMING", 1000);
         int resp = 1;
+        Libro[] libros = new Libro[5];
         while (resp != 5) {
             System.out.println("-------------------MENU-------------------");
             System.out.println("1. Spotify");
@@ -57,12 +58,12 @@ public class ExpoProgra1 {
             System.out.println("2. Devolver libro");
             System.out.println("3. Regresar al menu principal");
             System.out.print("Elige una opción: ");
-            resp2 = scanner.nextInt();
+            resp2 = lea.nextInt();
 
             switch (resp2) {
                 case 1:
                     System.out.print("Elige el número del libro que vas a rentar: ");
-                    int rent = scanner.nextInt() - 1;
+                    int rent = lea.nextInt() - 1;
                     if (rent >= 0 && rent < libros.length) {
                         if (libros[rent].getEstado().equals("disponible")) {
                             libros[rent].rentar();
@@ -75,7 +76,7 @@ public class ExpoProgra1 {
                     break;
                 case 2:
                     System.out.print("Elige el numero del libro que vas a devolver: ");
-                    int dev = scanner.nextInt() - 1;
+                    int dev = lea.nextInt() - 1;
                     if (dev >= 0 && dev< libros.length) {
                         libros[dev].devolver();
                     } else {
