@@ -24,7 +24,9 @@ private String titulo;
     public String getEstado() {
         return state;
     }
-
+    public void setTitulo(String titulo) {
+    this.titulo = titulo;
+    }
     public void rentar() {
         if (state.equals("disponible")) {
             state = "prestado";
