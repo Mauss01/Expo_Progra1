@@ -15,14 +15,14 @@ class Eleccion {
     private String cancion;
     private int popularidad;
 
-    // Constructor que establece los valores iniciales
+    
     public Eleccion(String ninguno, String ninguna, int par) {
         this.cantante = "Ninguno";
         this.cancion = "Ninguna";
         this.popularidad = 0;
     }
 
-    // Getter y Setter para el cantante
+    
     public String getCantante() {
         return cantante;
     }
@@ -31,7 +31,7 @@ class Eleccion {
         this.cantante = cantante;
     }
 
-    // Getter y Setter para la canción
+    
     public String getCancion() {
         return cancion;
     }
@@ -40,7 +40,7 @@ class Eleccion {
         this.cancion = cancion;
     }
 
-    // Getter y Setter para la popularidad
+    
     public int getPopularidad() {
         return popularidad;
     }
