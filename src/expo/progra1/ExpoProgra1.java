@@ -272,13 +272,13 @@ public class ExpoProgra1 {
         }
     }
     public static void mood(Eleccion spotify) {
-        // Crear una instancia de Clase_Spotify y pasarle la instancia de Eleccion
+        
         ExpoProgra1 app = new ExpoProgra1(spotify);
         app.mood();
     }
 
     private void mood() {
-        // Crear una instancia de Scanner para leer la entrada del usuario
+        
         Scanner scanner = new Scanner(System.in);
         int opcion;
 
@@ -305,15 +305,15 @@ public class ExpoProgra1 {
                 System.out.println("-------------------------------------");
             }
             opcion = scanner.nextInt();
-            scanner.nextLine(); // Consumir la nueva línea para evitar problemas con la entrada
+            scanner.nextLine(); 
 
-            // Manejo de opciones del menú utilizando un switch
+            
             switch (opcion) {
                 case 1:
-                    asignarCantante(scanner); // Pasa el scanner al método asignarCantante
+                    asignarCantante(scanner); 
                     break;
                 case 2:
-                    cambiarCancion(scanner); // Pasa el scanner al método cambiarCancion
+                    cambiarCancion(scanner); 
                     break;
                 case 3:
                     pararCancion();
@@ -345,9 +345,9 @@ public class ExpoProgra1 {
         } while (opcion != 5);
     }
 
-    // Método privado para asignar el cantante
+   
     private void asignarCantante(Scanner scanner) {
-        // Utiliza scanner para leer la elección del usuario
+        
         System.out.println();
         System.out.println("-------------------------------------");
         System.out.println("¿Que cantante desea?");
@@ -356,19 +356,19 @@ public class ExpoProgra1 {
         System.out.println("Seleccione una opcion: ");
         System.out.println("-------------------------------------");
 
-        // Validar que la entrada sea un número
+        
         while (!scanner.hasNextInt()) {
             System.out.println();
             System.out.println("-------------------------------------");
             System.out.println("Lo siento no contamos con ese artista.");
-            scanner.next(); // Descartar la entrada inválida
+            scanner.next(); 
             System.out.println("Seleccione una opcion: ");
             System.out.println("-------------------------------------");
         }
         int opcionCantante = scanner.nextInt();
-        scanner.nextLine(); // Consumir la nueva línea
+        scanner.nextLine(); 
 
-        // Asignar el cantante seleccionado
+        
         switch (opcionCantante) {
             case 1:
                 spotify.setCantante("Kanye West");
@@ -384,7 +384,7 @@ public class ExpoProgra1 {
         }
     }
 
-    // Método privado para cambiar la canción
+    
     private void cambiarCancion(Scanner scanner) {
         if ("Ninguno".equals(spotify.getCantante())) {
             System.out.println("-------------------------------------");
@@ -409,17 +409,17 @@ public class ExpoProgra1 {
             System.out.println((i + 1) + ") " + cancionesSeleccionadas[i]);
         }
 
-        // Validar que la entrada sea un número
+        
         while (!scanner.hasNextInt()) {
             System.out.println();
             System.out.println("-------------------------------------");
             System.out.println("Lo siento no contamos con esa cancion.");
-            scanner.next(); // Descartar la entrada inválida
+            scanner.next(); 
             System.out.println("Seleccione una cancion: ");
             System.out.println("-------------------------------------");
         }
         int opcionCancion = scanner.nextInt();
-        scanner.nextLine(); // Consumir la nueva línea
+        scanner.nextLine(); 
 
         if (opcionCancion < 1 || opcionCancion > cancionesSeleccionadas.length) {
             System.out.println();
@@ -434,7 +434,7 @@ public class ExpoProgra1 {
         spotify.setPopularidad(spotify.visitas(popularidad));
     }
 
-    // Método privado para parar la canción
+   
     private void pararCancion() {
         if ("Ninguna".equals(spotify.getCancion())) {
             System.out.println("-------------------------------------");
@@ -445,7 +445,7 @@ public class ExpoProgra1 {
         }
     }
 
-    // Método privado para mostrar la cuenta de Spotify
+    
     private void mostrarCuenta() {
         System.out.println();
         System.out.println("-------------------------------------");
